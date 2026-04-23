@@ -1,4 +1,10 @@
 const parent = document.getElementById("parent");
-parent.addEventListener("click", (e) => {
-    console.log(e.target.textContent);
+const child = document.getElementById("child");
+
+parent.addEventListener("click", () => {
+    console.log("parent clicked");
+})
+child.addEventListener("click", (e) => {
+    e.stopPropagation();
+    console.log("child clicked");
 })
