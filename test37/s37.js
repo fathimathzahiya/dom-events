@@ -1,9 +1,9 @@
-const form=document.getElementById("myForm");
+const form=document.getElementById("myform");
 const input=document.getElementById("inputtext");
 const list=document.getElementById("list");
-form.addEventListener("submit",(e)=>{
+form.addEventListener("submit",function(e){
     e.preventDefault();
-    const li=document.createElement("li");
+    let li=document.createElement("li");
     li.textContent=input.value;
     li.addEventListener("mouseenter",()=>{
         li.style.backgroundColor="lightblue";
